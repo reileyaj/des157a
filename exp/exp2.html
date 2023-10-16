@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 2</title>
+    <style>
+        .red {
+            background-color: red;
+        }
+        .orange {
+            background-color: orange;
+        }
+        .yellow {
+            background-color: yellow;
+        }
+        .green {
+            background-color: green;
+        }
+        .blue {
+            background-color: blue;
+        }
+        .purple {
+            background-color: purple;
+        }
+    </style>
+</head>
+<body id="neutral">
+    <h1>Experiment 2</h1>
+    <h2>Favorite Color Experiment</h2>
+
+    <script>
+        var color = prompt("What's your favorite color out of red, orange, yellow, green, blue, and purple?", "")
+        var bgColor = document.getElementById("neutral");
+
+        if (color.toLowerCase() == "red"){
+            bgColor.className = "red";
+        } else if (color.toLowerCase() == "orange"){
+            bgColor.className = "orange";
+        } else if (color.toLowerCase() == "yellow"){
+            bgColor.className = "yellow";
+        } else if (color.toLowerCase() == "green"){
+            bgColor.className = "green";
+        } else if (color.toLowerCase() == "blue"){
+            bgColor.className = "blue";
+        } else if (color.toLowerCase() == "purple"){
+            bgColor.className = "purple";
+        }
+    </script>
+</body>
+</html>
