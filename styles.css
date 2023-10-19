@@ -37,6 +37,7 @@ h1 {
     font-family: 'Borel', cursive;
     text-align: center;
     color: #5D2E46;
+    margin-top: 50px;
 }
 
 header h2 {
@@ -83,7 +84,7 @@ footer a {
 
 @media only screen and (min-width: 800px) {
     #banner img {
-        max-height: 150px;
+        max-height: 250px;
         transform: translateY(0)
     }
 
