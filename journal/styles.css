@@ -47,12 +47,19 @@ header h2 {
 nav {
     background-color: #D1D3C4;
     padding: 20px;
+    transform: translateY(20px);
+    height: fit-content;
 }
 
 nav ul {
     list-style-type: none;
     padding: 0;
 }
+
+nav ul li {
+    padding-bottom: 20px;
+}
+
 nav ul li a {
     text-decoration: none;
     text-align: right;
@@ -65,6 +72,7 @@ article {
     margin: auto;
     background-color: #D1D3C4;
     padding: 20px;
+    margin: 20px;
 }
 
 article h2 {
@@ -76,4 +84,15 @@ article h2 {
 article p {
     font-family: 'DotGothic16', sans-serif;
     color: #5D2E46;
+}
+
+footer {
+    text-align: center;
+    margin-top: 2em;
+}
+
+footer a {
+    font-family: 'DotGothic16', sans-serif;
+    color: #5D2E46;
+    text-decoration: none;
 }

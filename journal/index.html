@@ -15,31 +15,44 @@
     <header>
         <h1>Learning Journal</h1>
         <h2>DES 157A - Interactive Media II - Fall 2023</h2>
-        <img src="/images/star.png" alt="star" class="frog">
+        <img src="images/star.png" alt="star" class="frog">
     </header>
     
     <div class="flex">
         <nav>
             <ul>
                 <li><a href="#art1">Research from Design</a></li>
+                <li><a href="#art2">Overlays Design Pattern Research</a></li>
             </ul>
         </nav>
 
-        <article>
-            <h2 id="art1">Research from Design</h2>
-            <p>	
-                I’m sure we’ve all stumbled across forms that are woefully designed. Poorly put together forms are all around us: in the checkout section of online stores, in the sign-up phase for apps, and on voluntary surveys. This article, <a href="https://uxdesign.cc/best-practices-for-form-design-ff5de6ca8e5f">Best Practices for Form Design</a>, seeks to give us web designers guidelines to minimize pain points in our forms and provide the best user experience possible (which also reduces the chances of the form being abandoned!)
-            </p>
-            <p>
-                I already was familiar with some of the tactics used, such as chunking. Clearly indicating how many steps there are to the user, as well as what each step is (such as Shipping Address, Payment Information, and Order Confirmation for an online purchase) helps users get a sense of what they’ll need to fill out and their progress. Asking easy questions first, such as name and address, will get the user invested in the form before they may need to reach for something (like their credit card) to reference for future questions. I was surprised to learn that placeholder text can be harmful, because users sometimes forget the example and need to clear their answer to see it again. Leaving placeholder text visible underneath the input box can help reduce this.
-            </p>
-            <p>
-                A form I found easy to fill out is the <a href="https://discord.com/register">Discord</a> registration form. It’s common for apps to ask for a lot of unnecessary information; Discord makes sure to minimize input fields. Outside of the obligatory username and password, it only asks for an optional display name, an email to verify the account, and a date of birth to verify that the user is 13 or older. They also make sure to define which fields are necessary with an asterisk. 
-            </p>
-        </article>
+        <div>
+            <article id="art2">
+                <h2>Overlays Design Pattern Research</h2>
+                <p>
+                    Overlays demand user attention and prevent them from interacting with the parent screen until the overlay is dismissed or the task is completed. The article, <a href="https://uxplanet.org/best-practices-for-modals-overlays-dialog-windows-c00c66cddd8c">Best Practices for Modals / Overlays / Dialog Windows</a>, seeks to define correct (and incorrect) ways to use overlays. 
+                </p>
+                <p>
+                    I’ve always looked at overlays and pop-ups similarly, and it makes sense that many other users do too. Being surprised by an overlay can lead to immediate dismissal, even if what it’s asking is important. To combat this, the article instructs to never have an overlay appear on its own; always have it triggered by a button, preferably labeled in a way that matches the title of the overlay. I was also interested to learn that there should be multiple ways of closing an overlay. Usually I click outside the overlay or on the ‘close’ or ‘x’ button, but some people use their keyboards to control their devices. This means making the escape key functional too is an important part of making the overlay accessible. 
+                </p>
+            </article>
+
+            <article id="art1">
+                <h2>Research from Design</h2>
+                <p>	
+                    I’m sure we’ve all stumbled across forms that are woefully designed. Poorly put together forms are all around us: in the checkout section of online stores, in the sign-up phase for apps, and on voluntary surveys. This article, <a href="https://uxdesign.cc/best-practices-for-form-design-ff5de6ca8e5f">Best Practices for Form Design</a>, seeks to give us web designers guidelines to minimize pain points in our forms and provide the best user experience possible (which also reduces the chances of the form being abandoned!)
+                </p>
+                <p>
+                    I already was familiar with some of the tactics used, such as chunking. Clearly indicating how many steps there are to the user, as well as what each step is (such as Shipping Address, Payment Information, and Order Confirmation for an online purchase) helps users get a sense of what they’ll need to fill out and their progress. Asking easy questions first, such as name and address, will get the user invested in the form before they may need to reach for something (like their credit card) to reference for future questions. I was surprised to learn that placeholder text can be harmful, because users sometimes forget the example and need to clear their answer to see it again. Leaving placeholder text visible underneath the input box can help reduce this.
+                </p>
+                <p>
+                    A form I found easy to fill out is the <a href="https://discord.com/register">Discord</a> registration form. It’s common for apps to ask for a lot of unnecessary information; Discord makes sure to minimize input fields. Outside of the obligatory username and password, it only asks for an optional display name, an email to verify the account, and a date of birth to verify that the user is 13 or older. They also make sure to define which fields are necessary with an asterisk. 
+                </p>
+            </article>
+        </div>
     </div>
     <footer>
-
+        <a href="mailto:&#114;&#101;&#097;&#106;&#111;&#104;&#110;&#115;&#111;&#110;&#064;&#117;&#099;&#100;&#097;&#118;&#105;&#115;&#046;&#101;&#100;&#117;">Email Me!</a>
     </footer>
 </body>
 </html>
