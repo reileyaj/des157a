@@ -1,0 +1,36 @@
+body {
+    background-color: #B3DEE2;
+    max-width: 800px;
+    margin: auto;
+}
+
+#formDiv {
+    display: flex;
+    justify-content:space-between;
+}
+
+#submit {
+    display: block;
+    margin: auto;
+}
+
+div {
+    text-align: end;
+}
+
+h1 {
+    font-family: 'Yeseva One', serif;
+    text-align: center;
+    color: #720C2C;
+}
+
+p {
+    font-family: 'Mohave', sans-serif;
+    color: #720C2C;
+}
+
+label {
+    font-family: 'Mohave', sans-serif;
+    color: #720C2C;
+    line-height: 2em;
+}
