@@ -25,26 +25,36 @@
         <form>
             <div id="formDiv">
                 <div id="column1">
-                    <label for="recipientName">Recipient's Name: </label><input type="text" id="recipientName" required><br>
-                    <label for="time">Singular Measurement of Time: </label><input type="text" id="time" required><br>
-                    <label for="adj1">Adjective: </label><input type="text" id="adj1" required><br>
-                    <label for="adj2">Adjective: </label><input type="text" id="adj2" required><br>
-                    <label for="emotion">Emotion Noun: </label><input type="text" id="emotion" required><br>
-                    <label for="pluralNoun1">Plural Noun: </label><input type="text" id="pluralNoun1" required><br>
-                    <label for="pluralNoun2">Plural Noun: </label><input type="text" id="pluralNoun2" required><br>
+                    <label for="recipientName">Recipient's Name*: </label><input type="text" id="recipientName"><br>
+                    <label for="adj1">Adjective*: </label><input type="text" id="adj1" ><br>
+                    <label for="adj2">Adjective*: </label><input type="text" id="adj2" ><br>
+                    <label for="emotion">Emotion Noun*: </label><input type="text" id="emotion" ><br>
+                    <label for="pluralNoun1">Plural Noun*: </label><input type="text" id="pluralNoun1" ><br>
+                    <label for="pluralNoun2">Plural Noun*: </label><input type="text" id="pluralNoun2" ><br>
                 </div>
                 <div id="column2">
-                    <label for="food">Food: </label><input type="text" id="food" required><br>
-                    <label for="verb">Verb ending in -ed: </label><input type="text" id="verb" required><br>
-                    <label for="adj3">Adjective: </label><input type="text" id="adj3" required><br>
-                    <label for="pluralNoun3">Plural Noun: </label><input type="text" id="pluralNoun3" required><br>
-                    <label for="pluralNoun4">Plural Noun: </label><input type="text" id="pluralNoun4" required><br>
-                    <label for="adj4">Adjective: </label><input type="text" id="adj4" required><br>
-                    <label for="yourName">Your Name: </label><input type="text" id="yourName" required><br>
+                    <label for="food">Food*: </label><input type="text" id="food" ><br>
+                    <label for="adj3">Adjective*: </label><input type="text" id="adj3" ><br>
+                    <label for="pluralNoun3">Plural Noun*: </label><input type="text" id="pluralNoun3" ><br>
+                    <label for="pluralNoun4">Plural Noun*: </label><input type="text" id="pluralNoun4" ><br>
+                    <label for="adj4">Adjective*: </label><input type="text" id="adj4" ><br>
+                    <label for="yourName">Your Name*: </label><input type="text" id="yourName" ><br>
                 </div>
             </div>
             <input type="submit" value="Generate!" id="submit" >
         </form>
+
+        <section id="overlay" class="hidden">
+            <article>
+                <p id="madlib"> Content Here! </p>
+                <button class="close">Close</button>
+            </article>
+        </section>
+
+        <section id="errorContainer" class="hidden">
+            <p id="errorMsg"></p>
+        </section>
+        
     </main>
 </body>
 </html>

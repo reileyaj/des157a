@@ -19,11 +19,11 @@ main {
 #formDiv {
     display: flex;
     justify-content:space-between;
-    max-width: 1200px;
+    max-width: 800px;
     margin: auto;
 }
 
-#submit {
+#submit, .close {
     display: block;
     margin: auto;
     margin-top: 40px;
@@ -37,10 +37,6 @@ main {
     font-size: 20px;
 }
 
-#column1, #column2 {
-    width: 600px;
-}
-
 div {
     text-align: end;
 }
@@ -52,6 +48,10 @@ h1 {
     text-align: center;
     margin: 0;
     color: #720C2C;
+}
+
+#errorMsg {
+    text-align: center;
 }
 
 p {
@@ -76,7 +76,6 @@ input[type=text] {
     margin: 20px 0;
     background-color: #EAF2D7;
     border: none;
-    width: 310px;
     font-size: 18px;
     font-family: 'Mohave', sans-serif;
 
@@ -84,5 +83,38 @@ input[type=text] {
 
 input[type=text]:focus {
     background-color: #EA9AB2;
+}
 
+#overlay {
+    position: absolute;
+    background-color: rgba(0,0,0,0.5);
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    transition-property: opacity, visibility;
+    transition-duration: .5s;
+    transition-timing-function: ease;
+}
+
+#overlay article {
+    box-sizing: border-box;
+    background-color: #EAF2D7;
+    padding: 20px;
+    width: 50vw;
+    height: 80vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.showing {
+    visibility: visible;
+    opacity: 1;
 }
