@@ -21,9 +21,23 @@ body {
     animation: anijump .5s ease-out infinite alternate;
 }
 
+article figure {
+    border: medium #5D2E46 solid;
+    width: 500px;
+    margin: auto;
+}
+
 article img {
     display: block;
-    margin: auto;;
+    margin: auto;
+}
+
+figcaption{
+    background-color: #5D2E46;
+    color: #D1D3C4;
+    font-family: 'DotGothic16', sans-serif;
+    padding: 3px;
+    text-align: center; 
 }
 
 @keyframes anijump {
