@@ -10,7 +10,7 @@ body {
     animation: animation1 2s ease-in-out 1 alternate;
 }
 
-img {
+.frog {
     max-height: 200px;
     cursor: pointer;
     display: block;
@@ -19,6 +19,11 @@ img {
 
 .frog:hover {
     animation: anijump .5s ease-out infinite alternate;
+}
+
+article img {
+    display: block;
+    margin: auto;;
 }
 
 @keyframes anijump {

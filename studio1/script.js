@@ -39,6 +39,7 @@
             document.querySelector('#adj4').value = '';
             document.querySelector('#yourName').value = '';
             madLib.innerHTML = myText;
+            error.innerHTML - ``;
             overlay.className = 'showing';
             error.className = 'hidden';
         } else {
@@ -53,11 +54,13 @@
         e.preventDefault();
 
         overlay.className = 'hidden';
+        errorContainer.className = 'hidden';
     })
 
     document.addEventListener('keydown', function(event){
         if (event.key == 'Escape') {
             overlay.className = 'hidden';
+            errorContainer.className = 'hidden';
         }
     })
 
