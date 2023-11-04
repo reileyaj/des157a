@@ -53,27 +53,58 @@ footer {
     font-family: 'DotGothic16', sans-serif;
     color: #FFF;
     text-align: center;
-    /* transform: rotate(2deg); */
 }
 
-#decoration {
+#decoration, #textScroll {
     display: none;
 }
 
 @media only screen and (min-width: 800px) {
-    /* #imgScroll {
-        display: flex;
-        justify-content: space-between;
-        margin: 24px;
-    } */
-
     h1 {
         font-size: 48px;
         z-index: 2;
+        margin-bottom: 2em;
+        margin-top: 1em;
     }
 
     img {
         max-width: fit-content;
+    }
+
+    #textScroll {
+        display: contents;
+        display: block;
+        max-width: 30%;
+        position: relative;
+    }
+
+    #textScroll:before { /* Makes background rotated w/o tilting contents */
+        content: "";
+        position: fixed;
+        width: 110%;
+        height: 110%;
+        top: 10%;
+        left: -70%;
+        z-index: -1;
+        background: url(images/pinkpaper.jpg);
+        rotate: 8deg;
+        filter: drop-shadow(0 0 1em rgb(0, 0, 0));
+    }
+
+    #textScroll p {
+        font-family: 'DotGothic16', sans-serif;
+        color: #000;
+        margin: 150px 0 369px 0;
+    }
+
+    #textScroll p:last-of-type {
+        margin: 150px 0 0 0;
+    }
+
+    .flex {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-around;
     }
 
     #decoration {
