@@ -13,6 +13,8 @@ h1 {
     font-size: 37px;
     color:#FFF;
     text-align: center;
+    position: relative;
+    z-index: 5;
 }
 
 figure {
@@ -33,6 +35,10 @@ figcaption {
     text-align: center;
 }
 
+#imgScroll {
+    position: relative;
+    z-index: 1;
+}
 
 main {
     padding-bottom: 8em;
@@ -47,6 +53,7 @@ footer {
     bottom: 0;
     width: 100vw;
     height: 6em;
+    z-index: 2;
 }
 
 .footertext {
@@ -55,14 +62,14 @@ footer {
     text-align: center;
 }
 
-#decoration, #textScroll {
+.decoration, #textScroll {
     display: none;
 }
 
 @media only screen and (min-width: 800px) {
     h1 {
-        font-size: 48px;
-        z-index: 2;
+        font-size: 56px;
+        z-index: 4;
         margin-bottom: 2em;
         margin-top: 1em;
     }
@@ -74,7 +81,8 @@ footer {
     #textScroll {
         display: contents;
         display: block;
-        max-width: 30%;
+        max-width: 25%;
+        height: 70%;
         position: relative;
     }
 
@@ -89,16 +97,36 @@ footer {
         background: url(images/pinkpaper.jpg);
         rotate: 8deg;
         filter: drop-shadow(0 0 1em rgb(0, 0, 0));
+        overflow: hidden;
     }
 
     #textScroll p {
         font-family: 'DotGothic16', sans-serif;
         color: #000;
-        margin: 150px 0 369px 0;
+        font-size: 20px;
+        line-height: 1.6em;
+        /* margin: 14vw 0 28vw 0; */
+        height: 400px;
+        padding-top: 3em;
+    }
+
+    #textScrollDisappear {
+        position: fixed;
+        width: 110%;
+        height: 110%;
+        top: -96%;
+        left: -50%;
+        background: url(images/032.jpg);
+        rotate: 8deg;
+        z-index: 0;
+    }
+
+    .artist {
+        background-color: #8845e693;
     }
 
     #textScroll p:last-of-type {
-        margin: 150px 0 0 0;
+        height: 210px;
     }
 
     .flex {
@@ -107,26 +135,44 @@ footer {
         justify-content: space-around;
     }
 
-    #decoration {
-        z-index: 1;
+    .decoration {
         display:contents;
         position: relative;
     }
 
     #kandi1 {
+        width: 216px;
+        height: 223px;
+        background: url(images/kandi1.avif);
         position: fixed;
         bottom: -60px;
         left: 0;
-        z-index: 1;
         transform: rotate(50deg);
-        filter: drop-shadow(0 0 1em rgba(0, 0, 0, 0.501));
+        filter: drop-shadow(0 0 .5em rgba(0, 0, 0, 0.806));
+        z-index: 3;
     }
 
     #kandi2 {
+        width: 291px;
+        height: 260px;
+        background: url(images/kandi2.avif);
         top: -20px;
         right: -10px;
         position: fixed;
-        filter: drop-shadow(0 0 1em rgba(0, 0, 0, 0.501));
+        filter: drop-shadow(0 0 .5em rgba(0, 0, 0, 0.806));
+        z-index: 3;
+    }
+
+    #plur {
+        width: 250px;
+        height: 223px;
+        background: url(images/plurrrrr.avif);
+        position: fixed;
+        z-index: 3;
+        top: 0;
+        left: 0;
+        filter: drop-shadow(0 0 .5em rgba(0, 0, 0, 0.806));
+        filter: brightness(140%);
     }
 
     footer {
