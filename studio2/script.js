@@ -1,23 +1,8 @@
 (function(){
     'use strict';
     console.log('running js');
-
-    let figArray = []; //empty array for each ID of a figure to be pushed into later
-    let hotSpotArray = []; //empty array for each div in a figure to be pushed into later
-
-    const figures = document.querySelectorAll('figure'); // makes array of all figures
+    
     const hotSpots = document.querySelectorAll('figure div'); // makes array of divs inside figures
-    const hoverPic = document.querySelectorAll('.hoverPic'); // makes array of all imgs with class of hoverPic
-
-    for(const eachFig of figures){
-        figArray.push(eachFig.id); //puts IDs of each figure into figArray
-    };
-    //console.log(figArray);
-
-    for (const eachHotSpot of hotSpots){
-        hotSpotArray.push(eachHotSpot.id);  //puts every id of a div in a figure into hotSpotArray
-    }
-    //console.log(hotSpotArray);
 
     hotSpots.forEach(function(eachSpot){
         eachSpot.addEventListener('mouseover', showHoverPic); //tells browser to call showHoverPic function when mouse hovers over a hot spot
