@@ -155,7 +155,8 @@ figure div {
         left: -70%;
         z-index: -1;
         background: url(images/pinkpaper.jpg);
-        rotate: 8deg;
+        transform: rotate(8deg);
+        /* rotate: 8deg; */
         filter: drop-shadow(0 0 1em rgb(0, 0, 0));
         overflow: hidden;
     }
@@ -177,7 +178,7 @@ figure div {
         top: -96%;
         left: -50%;
         background: url(images/032.jpg);
-        rotate: 8deg;
+        transform: rotate(8deg);
         z-index: 0;
     }
 
