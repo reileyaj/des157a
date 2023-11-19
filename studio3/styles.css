@@ -102,6 +102,10 @@ figure {
     max-width: fit-content;
 }
 
+.attack:hover {
+    cursor: pointer;
+}
+
 h3 {
     font-family: 'Pixelify Sans', sans-serif;
     color: #E7D6F2;
@@ -162,7 +166,14 @@ p {
     background-color: #680505;
 }
 
+
+
 @media only screen and (min-width: 800px) {
+    body {
+        max-width: 900px;
+        margin: auto;
+    }
+    
     h1 {
         font-size: 48px;
     }
@@ -197,6 +208,11 @@ p {
     }
     
     /* GAME */
+    .attack {
+        margin-left: 4px;
+        margin-right: 4px;
+    }
+
     #attacks {
         display: flex;
         justify-content: space-around;
@@ -205,7 +221,9 @@ p {
     
     #arena {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
+        min-width: 0px;
+
     }
 
     #arena div img {
