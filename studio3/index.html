@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game On: Fight to the Undeath!</title>
+    <!--link JavaScript-->
+    <script src="script.js" defer></script>
+    <!--link fonts-->
+    <!--Pixelify Sans-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap" rel="stylesheet">
+
+    <!--link css stylesheet-->
+    <link href="styles.css" type="text/css" rel="stylesheet">
+
+</head>
+<body>
+    <h1>Game On;<br>Fight to the Undeath</h1>
+
+    <section id="characterSelect" class="invis">
+        <h2 id="directions">Player 1: Choose your character!</h2>
+        <div class="flex">
+                <figure id="zomb" class="character unselected">
+                    <img src="images/zomb.png" alt="pixelized zombie">
+                    <figcaption>Zombie</figcaption>
+                </figure>
+                <figure id="ghoul" class="character selected">
+                    <img src="images/ghoul.png" alt="pixelized ghoul">
+                    <figcaption>Ghoul</figcaption>
+                </figure>
+                <figure id="necro" class="character selected">
+                    <img src="images/necro.png" alt="pixelized necromancer">
+                    <figcaption>Necromancer</figcaption>
+                </figure>
+                <figure id="vamp" class="character unselected">
+                    <img src="images/vamp.png" alt="pixelized vamire">
+                    <figcaption>Vampire</figcaption>
+                </figure>
+        </div>
+        <button id="confirm1">Confirm</button>
+
+    </section>
+
+    <section id="Game" class="vis">
+        <h2 id="turnDirections">Necromancer - choose your attack!</h2>
+
+       <div id="attacks">
+            <div id="strongAttack" class="attack">
+                <h3>Wrath of the Dead</h3>
+                <p>strong attack, 20% success</p>
+            </div>
+            <div id="medAttack" class="attack">
+                <h3>Rigor Mortis</h3>
+                <p>strong attack, 50% success</p>
+            </div>
+            <div id="weakAttack" class="attack selectedAttack">
+                <h3>Skull Throw</h3>
+                <p>strong attack, 80% success</p>
+            </div>
+        </div>
+        <button id="confirm2">Confirm</button>
+        <div id="arena">
+            <div id="p1">
+                <img src="images/ghoul.png" alt="Player 1">
+                <div class="hpContainer">
+                    <div id="p1HP"></div>
+                </div>
+            </div>
+            <div id="p2">
+                <img src="images/necro.png" alt="Player 2">
+                <div class="hpContainer">
+                    <div id="p2HP"></div>
+            </div>   
+        </div>
+        
+
+        
+    </section>
+
+    <footer>
+        <p><a href="#">Valid HTML</a> | <a href="#">Valid CSS</a></p>
+    </footer>
+</body>
+</html>
