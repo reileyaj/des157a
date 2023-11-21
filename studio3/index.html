@@ -19,18 +19,18 @@
 <body>
     <h1>Game On;<br>Fight to the Undeath</h1>
 
-    <section id="characterSelect" class="invis">
+    <section id="characterSelect" class="vis">
         <h2 id="directions">Player 1: Choose your character!</h2>
         <div class="flex">
                 <figure id="zomb" class="character unselected">
                     <img src="images/zomb.png" alt="pixelized zombie">
                     <figcaption>Zombie</figcaption>
                 </figure>
-                <figure id="ghoul" class="character selected">
+                <figure id="ghoul" class="character unselected">
                     <img src="images/ghoul.png" alt="pixelized ghoul">
                     <figcaption>Ghoul</figcaption>
                 </figure>
-                <figure id="necro" class="character selected">
+                <figure id="necro" class="character unselected">
                     <img src="images/necro.png" alt="pixelized necromancer">
                     <figcaption>Necromancer</figcaption>
                 </figure>
@@ -43,40 +43,37 @@
 
     </section>
 
-    <section id="Game" class="vis">
+    <section id="Game" class="invis">
         <h2 id="turnDirections">Necromancer - choose your attack!</h2>
 
        <div id="attacks">
             <div id="strongAttack" class="attack">
-                <h3>Wrath of the Dead</h3>
+                <h3 id="strng"></h3>
                 <p>strong attack, 20% success</p>
             </div>
             <div id="medAttack" class="attack">
-                <h3>Rigor Mortis</h3>
-                <p>strong attack, 50% success</p>
+                <h3 id="mdm"> </h3>
+                <p>medium attack, 50% success</p>
             </div>
-            <div id="weakAttack" class="attack selectedAttack">
-                <h3>Skull Throw</h3>
-                <p>strong attack, 80% success</p>
+            <div id="weakAttack" class="attack">
+                <h3 id="wk"></h3>
+                <p>weak attack, 80% success</p>
             </div>
         </div>
         <button id="confirm2">Confirm</button>
         <div id="arena">
             <div id="p1">
-                <img src="images/ghoul.png" alt="Player 1">
+                <img src="#" alt="Player 1">
                 <div class="hpContainer">
                     <div id="p1HP"></div>
                 </div>
             </div>
             <div id="p2">
-                <img src="images/necro.png" alt="Player 2">
+                <img src="#" alt="Player 2">
                 <div class="hpContainer">
                     <div id="p2HP"></div>
             </div>   
         </div>
-        
-
-        
     </section>
 
     <footer>

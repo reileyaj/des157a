@@ -3,9 +3,9 @@
     display: none;
 } 
 
-font-face {
-    font-family: GothicPixels;
-    src: url(GothicPixels.ttf);
+@font-face {
+    font-family: 'GothicPixels';
+    src: url(GothicPixels.ttf) format("truetype");
 }
 
 body {
@@ -22,7 +22,7 @@ body {
 
 h1 {
     text-align: center;
-    font-family: GothicPixels;
+    font-family: 'GothicPixels';
     font-size: 32px;
     color: #B6EEF4;
 }
@@ -38,7 +38,7 @@ h2 {
     display: block;
     margin: auto;
     cursor: pointer;
-    font-family: GothicPixels;
+    font-family: 'GothicPixels';
     font-size: 25px;
     color:#E7D6F2;
     background-color: transparent;
@@ -86,7 +86,12 @@ figure {
 }
 
 .selected {
-    filter: greyscale(0);
+    filter: grayscale(0);
+}
+
+.unselected:hover {
+    filter: grayscale(0%);
+    cursor: pointer;
 }
 
 .unselected {
@@ -104,6 +109,10 @@ figure {
 
 .attack:hover {
     cursor: pointer;
+}
+
+.attack:hover h3, .attack:hover p {
+    color:#B6EEF4;
 }
 
 h3 {
