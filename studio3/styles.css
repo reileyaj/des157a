@@ -167,12 +167,16 @@ p {
     height: .8em;
     margin: auto;
     margin-top: .5em;
+    position: relative;
 }
 
 #p1HP, #p2HP {
-    max-width: 100%;
+    width: 100%;
     height: .8em;
     background-color: #680505;
+    position:absolute;
+    left: 0; top: 0;
+
 }
 
 

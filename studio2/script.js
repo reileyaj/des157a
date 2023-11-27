@@ -11,7 +11,7 @@
 
     function showHoverPic(e){
         const divId = e.target.id;
-        //console.log(divId);
+        console.log(divId);
 
         switch(divId){
             case `${divId}`: document.querySelector(`.${divId}`).className = `hoverPic showing ${divId}`; break; //utilizes that overlay images have a class named after the ID of the div they are in: hovering over the div with a certain div id will give the overlay image with the corresponding class name a class name of 'showing'
