@@ -3,6 +3,10 @@
     display: none;
 } 
 
+.noOpacity {
+    opacity: 0;
+}
+
 @font-face {
     font-family: 'GothicPixels';
     src: url(GothicPixels.ttf) format("truetype");
@@ -124,7 +128,7 @@ h3 {
 }
 
 p {
-    font-family: 'Pixelify Sans', sans-serif;
+    font-family: 'VT323', monospace; /* had to switch for legibility */
     color: #E7D6F2;
     text-align: center;
     margin: 0;

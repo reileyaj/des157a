@@ -1,7 +1,6 @@
 (function(){
     'use strict'
     //console.log('running JS');
-
     //Sections
     const characterSelect = document.querySelector('#characterSelect')
     const game = document.querySelector('#Game')
@@ -21,9 +20,7 @@
     const attackBtn = document.querySelector('#confirm2')
 
     //Players 
-    const player1 = document.querySelector('#p1');
     const player1Img = document.querySelector('#p1 img')
-    const player2 = document.querySelector('#p2');
     const player2Img = document.querySelector('#p2 img')
 
     //Directions
@@ -40,13 +37,12 @@
 
     //Attack Names
     const zombAttcks = ['Brain Gnaw', 'Sinew Slurp', 'Flesh Chomp'];
-    const ghoulAttcks = ['(soon to be) Corpse Feed', 'Phantom Wail', 'Spine Chill'];
+    const ghoulAttcks = ['Corpse Feed', 'Phantom Wail', 'Spine Chill'];
     const necroAttcks = ['Wrath of the Dead', 'Rigor Mortis', 'Skull Throw'];
     const vampAttcks = ['Blood Feast', 'Throat Tear', 'Fang Slice'];
 
     let attacker;
     let defender;
-    let defenderIndex;
 
     let gameData = {
         player1Char: null,
@@ -66,6 +62,7 @@
         eachChara.addEventListener('click', function(e){
             const charId1 = e.currentTarget.id;
             //console.log(`you clicked the ${charId1}`);
+            //console.log(gameData.currentPlayer)
 
             switch(charId1){ //makes it so only one character can be selected at a time.
                 case 'zomb': 
@@ -232,8 +229,15 @@
     var attackBtnHandler = function(){
             const selectedAttack = document.querySelector('.selectedAttack').id;
             const attackLevel = Math.floor(Math.random()*10);
+
+            attackContainers.forEach(function(eachAttack){ //makes attacks invisible 
+                eachAttack.className = 'attack noOpacity'
+            })
+
+            attackBtn.className = 'noOpacity';
+
             //console.log(selectedAttack);
-            console.log(attackLevel);
+            //console.log(attackLevel);
 
             switch(selectedAttack){ 
                 case 'strongAttack': 
@@ -241,7 +245,7 @@
                         case 0: case 1: case 2 : case 3: case 4: //50% chance of no damage
                             //console.log('no damage'); 
                             if(gameData.currentPlayer == 1){ //ensures health is taken from the opponent of the currentPlayer
-                                gameData.player2Health = gameData.player2Health - 0 //taking health away from defender
+                                gameData.player2Health = gameData.player2Health - 0 //0 //taking health away from defender
                                 //console.log(gameData.player2Health);
                             } else {
                                 gameData.player1Health = gameData.player1Health - 0
@@ -252,7 +256,7 @@
                         case 5: case 6: case 7: //30% chance of half damage
                             //console.log('half damage'); 
                             if(gameData.currentPlayer == 1){
-                                gameData.player2Health = gameData.player2Health - 20
+                                gameData.player2Health = gameData.player2Health - 20 //20
                             } else {
                                 gameData.player1Health = gameData.player1Health - 20
                             };
@@ -261,7 +265,7 @@
                         case 8: case 9: //20% chance full damage
                             //console.log('full damage');
                             if(gameData.currentPlayer == 1){
-                                gameData.player2Health = gameData.player2Health - 40
+                                gameData.player2Health = gameData.player2Health - 40 //40
                             } else {
                                 gameData.player1Health = gameData.player1Health - 40
                             };
@@ -327,8 +331,12 @@
                     break;
             }
 
-            console.log(`Player 1: ${gameData.player1Health}`);
-            console.log(`Player 2: ${gameData.player2Health}`);
+            switch(gameData.currentPlayer){ //switches default sprite to attack sprite
+                case 1: player1Img.src = `images/${gameData.player1Char}At.png`; break;
+                case 2: player2Img.src = `images/${gameData.player2Char}At.png`; break;
+            }
+
+            //console.log(`Player 1: ${gameData.player1Health}`); console.log(`Player 2: ${gameData.player2Health}`);
 
             p1HP.style.width = `${gameData.player1Health}%`; p2HP.style.width = `${gameData.player2Health}%`; //update the width of the healthbar to reflect the % of health left
 
@@ -343,13 +351,38 @@
 
     function checkWinCondition(){
         setTimeout(function(){
+
             if (gameData.player1Health < 1){
                 turnDirections.innerHTML = 'Player 1 has been slain! Player 2 defeats its foe!'
+                player1Img.style.filter = "grayscale(80%)"; //greys out losing player
+
+                attackContainers.forEach(function(eachAttack){ //makes attack namaes disappear when game has been completed
+                    eachAttack.className = 'attack noOpacity'
+                })
+
+                attackBtn.innerHTML = "New Game" //changes attack button to new game button
+                attackBtn.addEventListener('click', newGame);
+
             } else if (gameData.player2Health < 1){
                 turnDirections.innerHTML = 'Player 2 has been slain! Player 1 defeats its foe!'
-            } else {
-                
+                player2Img.style.filter = "grayscale(80%)";
+
+                attackContainers.forEach(function(eachAttack){
+                    eachAttack.className = 'attack noOpacity'
+                })
+
+                attackBtn.innerHTML = "New Game" 
+                attackBtn.addEventListener('click', newGame);
+
+            } else { //if no one has won
                 attackContainers[0].className = 'attack'; attackContainers[1].className = 'attack'; attackContainers[2].className = 'attack'; //makes all attacks unselected so next turn can start w/o a selected attack
+
+                player1Img.src = `images/${gameData.player1Char}.png`; player2Img.src = `images/${gameData.player2Char}.png`; //switches attack sprite back to default sprite
+
+                attackContainers.forEach(function(eachAttack){ //makes attacks visible again
+                    eachAttack.className = 'attack'
+                })
+                attackBtn.className = ''; //makes confirm button visible again
     
                 switch(gameData.currentPlayer){ //switches current player
                     case 1: gameData.currentPlayer = 2; break;
@@ -358,5 +391,11 @@
                 startTurn();//starts the next turn
             }
         }, 3000)
-    }
+    };
+
+    function newGame(){
+        location.reload(); //refreshes page for new game
+
+    };
+
 })();
