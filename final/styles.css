@@ -1,32 +1,73 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     max-width: 750px;
     margin: auto;
-    background-color: #DCDAD1;
-    position: relative;
+    padding: 20px;
+    background-color: #BDC696;
+    animation: animation1 2s ease-in-out 1 alternate;
 }
 
-main {
-    background-color: #F1F0EA;
-    padding: 20px;
-    min-height: 100%;
+.frog {
+    max-height: 200px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+}
+
+.frog:hover {
+    animation: anijump .5s ease-out infinite alternate;
+}
+
+@keyframes anijump {
+    from {transform: translateY(0px)}
+    to {transform: translateY(-20px)}
 }
 
 h1 {
-    padding-top: 10px;
+    font-family: 'Borel', cursive;
     text-align: center;
-    font-family: 'Italiana', sans-serif;
-    color: #2D232E;
+    color: #5D2E46;
+    margin-top: 50px;
 }
 
-h2, p{
-    font-family: 'Maitree', serif;
-    color: #464448;
+h2 {
+    font-family: 'DotGothic16', sans-serif;
+    color: #5D2E46;
+    margin-top: 0;
 }
 
-footer p{
+.flex {
+    display: flex;
+}
+
+main {
+    max-width: 800px;
+    margin: auto;
+    background-color: #D1D3C4;
+    padding: 20px;
+    margin: 20px;
+}
+
+main h2 {
+    font-family: 'Borel', cursive;
+    color: #5D2E46;
+    margin-bottom: 0;
+}
+
+p {
+    font-family: 'DotGothic16', sans-serif;
+    color: #5D2E46;
+}
+
+footer {
     text-align: center;
+    margin-top: 2em;
 }
 
-footer p a {
-    color: #2D232E;
+footer a {
+    font-family: 'DotGothic16', sans-serif;
+    color: #5D2E46;
 }
