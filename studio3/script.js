@@ -113,10 +113,17 @@
             player2Img.src = `images/${gameData.player2Char}.png`;
             gameData.currentPlayer = 1;
             characterSelect.className = 'invis'; game.className = 'vis'; //switches visible section from character select to the game itself
+            
 
             zomb.className = 'character unselected'; ghoul.className = 'character unselected';necro.className = 'character unselected'; vamp.className = 'character unselected';
 
             turnDirections.innerHTML = 'FIGHT!'
+            attackBtn.className = 'noOpacity'; attackBtn.style.pointerEvents = "none";
+            attackContainers.forEach(function(eachAttack){ //makes attacks invisible 
+                eachAttack.className = 'attack noOpacity'
+                eachAttack.style.pointerEvents = "none"
+            })
+
 
             setTimeout(function(){ //starts game after 1 second
                 startTurn();
@@ -130,6 +137,11 @@
     //THAT TOOK SO LONG AT LEAST WE'RE AT THE GAME NOW!!!
 
     function startTurn(){ //runs at the start of the game, is called after p2 confirms their character
+        attackBtn.className = ''; attackBtn.style.pointerEvents = "auto"; //makes buttons available again
+        attackContainers.forEach(function(eachAttack){
+            eachAttack.className = 'attack'
+            eachAttack.style.pointerEvents = "auto"
+        })
 
         switch (gameData.currentPlayer){ //tells browser what to do when each character is the current player
             case 1:
@@ -232,9 +244,11 @@
 
             attackContainers.forEach(function(eachAttack){ //makes attacks invisible 
                 eachAttack.className = 'attack noOpacity'
+                eachAttack.style.pointerEvents = "none"
             })
 
             attackBtn.className = 'noOpacity';
+            attackBtn.style.pointerEvents = "none"
 
             //console.log(selectedAttack);
             //console.log(attackLevel);
@@ -360,6 +374,7 @@
                     eachAttack.className = 'attack noOpacity'
                 })
 
+                attackBtn.className = ''; attackBtn.style.pointerEvents = "auto"//makes confirm button visible & responsive again
                 attackBtn.innerHTML = "New Game" //changes attack button to new game button
                 attackBtn.addEventListener('click', newGame);
 
@@ -371,6 +386,7 @@
                     eachAttack.className = 'attack noOpacity'
                 })
 
+                attackBtn.className = ''; attackBtn.style.pointerEvents = "auto"//makes confirm button visible & responsive again
                 attackBtn.innerHTML = "New Game" 
                 attackBtn.addEventListener('click', newGame);
 
@@ -380,9 +396,10 @@
                 player1Img.src = `images/${gameData.player1Char}.png`; player2Img.src = `images/${gameData.player2Char}.png`; //switches attack sprite back to default sprite
 
                 attackContainers.forEach(function(eachAttack){ //makes attacks visible again
-                    eachAttack.className = 'attack'
+                    eachAttack.className = 'attack';
+                    eachAttack.style.pointerEvents = "auto";
                 })
-                attackBtn.className = ''; //makes confirm button visible again
+                attackBtn.className = ''; attackBtn.style.pointerEvents = "auto"//makes confirm button visible & responsive again
     
                 switch(gameData.currentPlayer){ //switches current player
                     case 1: gameData.currentPlayer = 2; break;
