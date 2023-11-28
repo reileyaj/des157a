@@ -1,0 +1,32 @@
+body {
+    max-width: 750px;
+    margin: auto;
+    background-color: #DCDAD1;
+    position: relative;
+}
+
+main {
+    background-color: #F1F0EA;
+    padding: 20px;
+    min-height: 100%;
+}
+
+h1 {
+    padding-top: 10px;
+    text-align: center;
+    font-family: 'Italiana', sans-serif;
+    color: #2D232E;
+}
+
+h2, p{
+    font-family: 'Maitree', serif;
+    color: #464448;
+}
+
+footer p{
+    text-align: center;
+}
+
+footer p a {
+    color: #2D232E;
+}
