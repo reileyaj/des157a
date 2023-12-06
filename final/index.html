@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heist Generator</title>
+    <!--link JavaScript-->
+    <script src="script.js" defer></script>
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&family=UnifrakturMaguntia&family=Unna:wght@400;700&display=swap" rel="stylesheet"> 
+    <link href="styles2.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Heist Generator</h1>
+        <p class="left">You are a detective investigating a heist on campus. You’ve proudly announced that you won’t rest until you’ve caught the perp...but you’re six coffees in and pretty tired, so you’re just going to make something up. That’s ok. Enter some information to find out what the story is.</p>
+        <button id="start"><a href="#form1">Get Started</a></button>
+    </header>
+    <form id="myForm">
+        <section id="form1" class="invis">
+            <h2>Forged Evidence</h2>
+            <p>Form 1 of 3</p>
+            <button id="autofill0">AUTO-FILL</button><br>
+
+            <div><label for="artType">Type of Art: </label><input type="text" id="artType" placeholder="collage"></div>
+            <div><label for="weekday">Day of the Week: </label><input type="text" id="weekday" placeholder="Saturday"></div>
+            <div><label for="superlative">Superlative: </label><input type="text" id="superlative" placeholder="extremely"></div>
+            <div><label for="num">Number: </label><input type="text" id="num" placeholder="566"></div>
+
+            <div id="coffeestain1"></div>
+
+            <button id="next1"><a href="#form2">Next Form:</a></button>
+        </section>
+        <section id="form2" class="invis">
+            <h2>Forged Evidence</h2>
+            <p>Form 2 of 3</p>
+            <button id="autofill1">AUTO-FILL</button><br>
+
+            <div><label for="fullName">Name: </label><input type="text" id="fullName" placeholder="Gary May"></div>
+            <div><label for="artist">Famous Artist: </label><input type="text" id="artist" placeholder="Gustav Klimt"></div>
+            <div><label for="adverb">Adverb: </label><input type="text" id="adverb" placeholder="wisely"></div>
+            <div><label for="noun1">noun: </label><input type="text" id="noun1" placeholder="unicorn"></div>
+
+            <button id="next2"><a href="#form3">Next Form:</a></button>
+        </section>
+        <section id="form3" class="invis">
+            <h2>Forged Evidence</h2>
+            <p>Form 3 of 3</p>
+            <button id="autofill2">AUTO-FILL</button><br>
+
+            <div><label for="bodyPart">Body Part: </label><input type="text" id="bodyPart" placeholder="fingernail"></div>
+            <div><label for="noun">Noun: </label><input type="text" id="noun" placeholder="nebula"></div>
+            <div><label for="ingVerb">Verb ending in -ing: </label><input type="text" id="ingVerb" placeholder="cartwheeling"></div>
+            <div><label for="yourName">Your Name: </label><input type="text" id="yourName" placeholder="Sherlock Holmes"></div>
+
+            <div id="coffeestain2"></div>
+            
+            <input type="submit" value="SUBMIT" href="#finished">
+            <p id="error"></p>
+        </section>     
+    </form>
+   
+    
+    <section id="finished" class="invis">
+        <h3>UC Davis Student News</h3>
+        <h2 class="title">Title Here!</h2>
+        <p class="fancyP left">Suspect claims: "I've been framed!"</p>
+        <p class="newspaper left">Content here!</p>
+        <button class="restart">Restart</button>
+    </section>
+    
+</body>
+</html>
