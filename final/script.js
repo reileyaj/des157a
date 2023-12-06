@@ -53,13 +53,13 @@
         const weekdayNum = Math.floor(Math.random() * weekdayList.length); document.querySelector('#weekday').value = `${weekdayList[weekdayNum]}`;
         const superlativeNum = Math.floor(Math.random() * superlativesList.length); document.querySelector('#superlative').value = `${superlativesList[superlativeNum]}`;
         const numNum = Math.floor(Math.random() * 369); document.querySelector('#num').value = `${numNum}`;
-    })
+    });
     autofill1.addEventListener('click', function(){
         const nameNum = Math.floor(Math.random() * nameList.length); document.querySelector('#fullName').value = `${nameList[nameNum]}`;
         const artistNum = Math.floor(Math.random() * artistList.length); document.querySelector('#artist').value = `${artistList[artistNum]}`;
         const adverbNum = Math.floor(Math.random() * adverbList.length); document.querySelector('#adverb').value = `${adverbList[adverbNum]}`;
         const nounNum = Math.floor(Math.random() * nounList.length); document.querySelector('#noun1').value = `${nounList[nounNum]}`;
-    })
+    });
     autofill2.addEventListener('click', function(){
         const bodypartNum = Math.floor(Math.random() * bodypartsList.length); document.querySelector('#bodyPart').value = `${bodypartsList[bodypartNum]}`;
         const nounNum = Math.floor(Math.random() * nounList.length); document.querySelector('#noun').value = `${nounList[nounNum]}`;
@@ -68,7 +68,7 @@
     });
 
     //submit
-    form.addEventListener('click', function(event){
+    document.querySelector('#submit').addEventListener('click', function(event){
         event.preventDefault();
         processFormData(formData);
     });
