@@ -140,7 +140,7 @@ input[type=text] {
         margin: 16px;
     }
 
-    #form1, #form2 {
+    #form1, #form3 {
         position: relative;
     }
     #coffeestain1 {
@@ -156,7 +156,7 @@ input[type=text] {
         height: 185px;
         width: 200px;
         position: absolute;
-        left: 185px;
+        left: 5px;
         background: url(images/coffeestain1.png);
     }
 
