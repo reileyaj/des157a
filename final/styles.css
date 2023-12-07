@@ -60,6 +60,13 @@ main h2 {
 p {
     font-family: 'DotGothic16', sans-serif;
     color: #5D2E46;
+    margin-top: 0;
+}
+
+img {
+    display: block;
+    margin: auto;
+    margin-top: 16px;
 }
 
 footer {
