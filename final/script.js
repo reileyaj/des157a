@@ -39,12 +39,15 @@
     //click buttons
     start.addEventListener('click', function(){ // click on start button
         form1.className = 'vis'; //makes form 1 visible.
+        document.querySelector('#form1').scrollIntoView({behavior: "smooth"});
     });
     next1.addEventListener('click', function(){
         form2.className = 'vis'
+        document.querySelector('#form2').scrollIntoView({behavior: "smooth"});
     });
     next2.addEventListener('click', function(){
         form3.className = 'vis'
+        document.querySelector('#form3').scrollIntoView({behavior: "smooth"});
     });
 
     //autofills
@@ -91,6 +94,7 @@
             showErrors(formData, emptyfields);
         } else {
             makeMadlib(words);
+            document.getElementById('finished').scrollIntoView({behavior: "smooth"});
         };
     };
 
