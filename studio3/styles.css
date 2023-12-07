@@ -32,10 +32,17 @@ h1 {
 }
 
 h2 {
-    font-family: 'Pixelify Sans', sans-serif;
+    /* font-family: 'Pixelify Sans', sans-serif; */
+    /* font-family: "lores-12", sans-serif;
+    font-weight: 400;
+    font-style: normal; */
+    font-family: "lores-9-wide", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     color: #E7D6F2;
     text-align: center;
     font-size: 20px;
+    height: 44px;
 }
 
 #confirm1, #confirm2{
@@ -103,6 +110,11 @@ figure {
 }
 
 /* GAME */
+#attacks {
+    height: 142px;
+    padding-bottom: 16px;
+}
+
 .attack {
     background-color: #d9d9d92c;
     margin: auto;
@@ -120,7 +132,10 @@ figure {
 }
 
 h3 {
-    font-family: 'Pixelify Sans', sans-serif;
+    /* font-family: 'Pixelify Sans', sans-serif; */
+    font-family: "lores-9-wide", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     color: #E7D6F2;
     font-size: 18px;
     text-align: center;
@@ -128,7 +143,10 @@ h3 {
 }
 
 p {
-    font-family: 'VT323', monospace; /* had to switch for legibility */
+    /* font-family: 'VT323', monospace; */ /* had to switch for legibility */
+    font-family: "lores-12", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     color: #E7D6F2;
     text-align: center;
     margin: 0;
@@ -198,6 +216,7 @@ p {
     h2 {
         font-size: 36px;
         margin: auto 16px;
+        height: 80px;
     }
 
     section {
@@ -234,6 +253,7 @@ p {
         display: flex;
         justify-content: space-around;
         order: 2;
+        height: 54px;
     }
     
     #arena {
