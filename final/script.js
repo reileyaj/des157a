@@ -107,11 +107,16 @@
         const errorText = '';
         document.querySelector('#error').innerHTML = errorText; //deletes error text
             //console.log(`${words[0]}, ${words[1]},${words[2]}, ${words[3]},${words[4]}, ${words[5]},${words[6]}, ${words[7]},${words[8]}, ${words[9]},${words[10]}, ${words[11]},${words[12]}`)
-        
+/*         
+        words[4] = words[4].toLowerCase()
+            .split(' ')
+            .map((s) => s.charAt(0).toUpperCase() + s.substring(1))
+            .join(''); */ //this is how I get the names below to capitalize the first letter of each word of the string, so aubrey drake graham -> Aubrey Drake Graham
+
         const title = document.querySelector('.title')
         const news = document.querySelector('.newspaper')
         const myTitle = `${words[0].toUpperCase()} THIEF CAUGHT!`;
-        const myNews = `Early ${words[1]} morning, it was discovered that a ${words[0]} made by world-renowned artist ${words[5]} had disappeared from the Manetti Shrem Museum. The piece, titled 'The ${words[2].charAt(0).toUpperCase() + words[2].slice(1)} Empty ${words[7].charAt(0).toUpperCase() + words[7].slice(1)}', depicted a ${words[9]} has been appraised for ${words[3]} million dollars. Police and museum staff ${words[6]} scoured the premises for hours, but have yet to recover it. Late last night, ${words[4]} was discovered ${words[10]} near the location of the crime and arrested for the theft. "I'm innocent!" they claim. A likely story. ${words[11]}, the lead detective for the case, assures the public they've caught the correct perp. "I'm not a lazy detective, and all the evidence points to our suspect." They then went on to explain how their ${words[8]} has been feeling funny since the crime, but has gone back to normal since the suspect was arrested. Undoubtably, this is a clear sign that the case has been solved. The ${words[0]} has yet to be recovered.`;
+        const myNews = `Early ${words[1].charAt(0).toUpperCase()+ words[1].slice(1)} morning, it was discovered that a ${words[0]} made by world-renowned artist ${words[5].toLowerCase().split(' ').map((s) => s.charAt(0).toUpperCase() + s.substring(1)).join(' ')} had disappeared from the Manetti Shrem Museum. The piece, titled 'The ${words[2].toLowerCase().split(' ').map((s) => s.charAt(0).toUpperCase() + s.substring(1)).join(' ')} Empty ${words[7].charAt(0).toUpperCase() + words[7].slice(1)}', depicted a ${words[9]} and has been appraised for ${words[3]} million dollars. Police and museum staff ${words[6]} scoured the premises for hours, but have yet to recover it. Late last night, ${words[4].toLowerCase().split(' ').map((s) => s.charAt(0).toUpperCase() + s.substring(1)).join(' ')} was discovered ${words[10]} near the location of the crime and arrested for the theft. "I'm innocent!" they claim. A likely story. ${words[11].toLowerCase().split(' ').map((s) => s.charAt(0).toUpperCase() + s.substring(1)).join(' ')}, the lead detective for the case, assures the public they've caught the correct perp. "I'm not a lazy detective, and all the evidence points to our suspect." They then went on to explain how their ${words[8]} has been feeling funny since the crime, but has gone back to normal since the suspect was arrested. Undoubtably, this is a clear sign that the case has been solved. The ${words[0]} has yet to be recovered.`;
 
         title.innerHTML = myTitle;
         news.innerHTML = myNews;
