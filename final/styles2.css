@@ -33,7 +33,7 @@ header, section {
 h1, h2, h3, p, label {
     color: #464448;
 }
-h2, p, label, button, input[type=submit] {
+h2, p, label, button, a, input[type=submit] {
     font-family: 'Ubuntu Mono', monospace;
 }
 h1, h2, p {
@@ -90,7 +90,7 @@ button, input[type=submit] {
     margin: auto;
 }
 
-button a {
+button {
     color: #D9D9D9;
     text-decoration: none;
 }
@@ -98,7 +98,7 @@ button a {
 button:hover, input[type=submit]:hover {
     background-color: #2D232E;
 }
-button:last-of-type, input[type=submit]{
+button:last-of-type,  input[type=submit]{
     margin-bottom: 16px;
 }
 input[type=text] {
