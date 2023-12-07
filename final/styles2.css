@@ -1,9 +1,6 @@
 html {
     scroll-behavior: smooth;
 }
-/* .vis {
-    display: block;
-} */
 .invis {
     display: none;
 }
